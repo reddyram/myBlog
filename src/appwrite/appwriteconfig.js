@@ -1,6 +1,6 @@
 import conf from "../conf/config";
 
-import { Client, Account, ID, Databases, Storage, Query } from "appwrite";
+import { Client, ID, Databases, Storage, Query } from "appwrite";
 
 export class DatabaseService {
   client = new Client();
@@ -26,7 +26,7 @@ export class DatabaseService {
         { title, content, featuredImage, status, userid }
       );
     } catch (error) {
-      throw error;
+      console.log("Appwrite service :: createPost :: error", error);
     }
   }
 
@@ -44,7 +44,7 @@ export class DatabaseService {
         }
       );
     } catch (error) {
-      throw error;
+      console.log("Appwrite service :: updatePost :: error", error);
     }
   }
 
